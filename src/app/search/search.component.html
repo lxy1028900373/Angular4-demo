@@ -1,0 +1,33 @@
+<!--<p>-->
+  <!--search works!-->
+<!--</p>-->
+<!--搜索组件-->
+
+<!--role="form"告诉辅助设备（如屏幕阅读器）这个元素所扮演的角色是个表单-->
+<!--在button中role="button"就是告诉设备，这是个按钮，可以点击。本质上是增强语义性，增强组件的可访问性、可用性-->
+<form role="form" name="searchForm">
+  <div class="form-group">
+    <label for="productTitle" class="control-label">
+      商品名称:
+    </label>
+    <input type="text" id="productTitle" class="form-control" placeholder="商品名称">
+  </div>
+  <div class="form-group">
+    <label for="productPrice" class="control-label">
+      商品价格:
+      <input type="number" id="productPrice" class="form-control" placeholder="商品价格">
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="productCategory" class=control-label>
+      商品类型:
+      <select id="productCategory" class="form-control"></select>
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="productTitle" class="control-label">
+      商品名称:
+      <input type="submit" class="btn btn-primary btn-block" value="搜索">
+    </label>
+  </div>
+</form>

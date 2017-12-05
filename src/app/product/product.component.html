@@ -1,0 +1,34 @@
+<!--<p>-->
+  <!--product works!-->
+<!--</p>-->
+<!--商品详情-->
+
+<div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let product of products">
+  <div class="thumbnail">
+    <img src="http://placehold.it/320x150" alt="商品图片">
+    <div class="caption">
+      <h4 class="pull-right">
+        ￥{{product.price}}
+      </h4>
+      <h4>
+        <a>{{product.title}}</a>
+      </h4>
+      <p>
+        {{product.desc}}
+      </p>
+    </div>
+    <div>
+      <!--注入rating-->
+      <app-stars [rating]="product.rating">
+        <p>
+          <i *ngFor="let star of stars" class="fa"
+             [class.fa-star]="star==='full'"
+             [class.fa-star-half-o]="star==='half'"
+             [class.fa-star-o]="star==='empty'"
+          ></i>
+          <span>{{rating}}星</span>
+        </p>
+      </app-stars>
+    </div>
+  </div>
+</div>
